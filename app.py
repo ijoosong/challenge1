@@ -2,6 +2,10 @@ from challenge import *
 from flask import *
 app = Flask(__name__)
 
+@app.route("/")
+def show_home():
+    return "Hello World. Try /table :)"
+
 @app.route("/table")
 def show_table():
     """
