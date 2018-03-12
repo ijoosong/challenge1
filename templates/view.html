@@ -1,0 +1,15 @@
+<!doctype html>
+<title>Subsplash</title>
+<div class=page>
+<h1>Youtube Videos</h1>
+<table>
+    {% for item in items %}
+    <TR>
+    <TD class="c1">{{item.title}}</TD>
+    <TD class="c2">{{item.duration[0]}}:{{item.duration[1]}}:{{item.duration[2]}}</TD>
+    <TD class="c3">{{item.youtube_url}}</TD>
+    <TD class="c4">{{item.reach}}</TD>
+    </TR>
+    {% endfor %}
+</table>
+</div>
