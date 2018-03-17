@@ -16,6 +16,16 @@ def show_table():
     list_to_render = [item for item in list if int(item['views']) >= 100 and is_longer_than_forty_five_minutes(item['duration'])]
     return render_template('view.html', items=list_to_render, title='youtube videos')
 
+@app.route("/login")
+def show_login():
+    # is_user_logged_in
+    # give login button
+    # login_user(username, password) => true or false
+    # returns auth token
+    # db => user logged in user number of times logged in or time logged in
+    return render_template('login.html', title='Login Page')
+
+
 def is_longer_than_forty_five_minutes(item):
     """
     Checks to see if video is longer than 45 minutes
